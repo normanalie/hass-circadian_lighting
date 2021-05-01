@@ -1,5 +1,7 @@
+## FORK OF:
 # Circadian Lighting [[Home Assistant](https://www.home-assistant.io/) Component]
 ## Stay healthier and sleep better by syncing your lights with natural daylight to maintain your circadian rhythm!
+## (added brightness adjust across the day)
 
 ![Circadian Light Rhythm|690x287](https://community-home-assistant-assets.s3.dualstack.us-west-2.amazonaws.com/original/3X/5/f/5fe7a780e9f8905fea4d1cbb66cdbe35858a6e36.jpg)
 
