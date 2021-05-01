@@ -248,10 +248,20 @@ class CircadianSwitch(SwitchEntity, RestoreEntity):
                 _LOGGER.debug(self._name + " in Sleep mode")
                 return self._sleep_brightness
             else:
+                # GeoGebra model: https://www.geogebra.org/calculator/tdgxwqyr
                 if self._cl.data['percent'] > 0:
-                    return self._max_brightness
+                    #   55-10 * 80/100 + 10 
+                    # = 45*0.8 + 10 
+                    # = 36+10 
+                    # = 46
+                    return (self._max_brightness - self._min_brightness) * (self._cl.data['percent']/100) + self._min_brightness
                 else:
-                    return ((self._max_brightness - self._min_brightness) * ((100+self._cl.data['percent']) / 100)) + self._min_brightness
+                    #   (55+10)/2 * 100+(-20)/100 + 10 
+                    # = 65/2 * 80/100 + 10 
+                    # = 32.5*0.8 + 10 
+                    # = 26+10 
+                    # = 36
+                    return ((self._max_brightness + self._min_brightness)/2 * ((100+self._cl.data['percent']) / 100)) + self._min_brightness
 
     def update_switch(self, transition=None):
         if self._cl.data is not None:
