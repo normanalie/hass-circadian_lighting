@@ -256,12 +256,12 @@ class CircadianSwitch(SwitchEntity, RestoreEntity):
                     # = 46
                     return (self._max_brightness - self._min_brightness) * (self._cl.data['percent']/100) + self._min_brightness
                 else:
-                    #   (55+10)/2 * 100+(-20)/100 + 10 
-                    # = 65/2 * 80/100 + 10 
-                    # = 32.5*0.8 + 10 
-                    # = 26+10 
-                    # = 36
-                    return ((self._max_brightness + self._min_brightness)/2 * ((100+self._cl.data['percent']) / 100)) + self._min_brightness
+                    #   (55-10)/1.5 * 100+(-20)/100 + 10 
+                    # = 45/1.5 * 80/100 + 10 
+                    # = 30*0.8 + 10 
+                    # = 24+10 
+                    # = 34
+                    return ((self._max_brightness - self._min_brightness)/1.5 * ((100+self._cl.data['percent']) / 100)) + self._min_brightness
 
     def update_switch(self, transition=None):
         if self._cl.data is not None:
