@@ -27,9 +27,8 @@ In addition, Circadian Lighting can set your lights to a nice cool white at 1% i
 ## Basic Installation/Configuration Instructions:
 
 #### Installation:
-Install [Manually](https://github.com/claytonjn/hass-circadian_lighting/wiki/Installation-Instructions#manual-installation).
+Install [Manually](https://github.com/claytonjn/hass-circadian_lighting/wiki/Installation-Instructions#manual-installation) or Overwrite the original switch.py file with [/custom_components/circadian_lighting/switch.py](https://raw.githubusercontent.com/normanalie/hass-circadian_lighting_with_brightness/master/custom_components/circadian_lighting/switch.py) (Update will overwrite the file !).
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
 
 #### Component Configuration:
 ```yaml
@@ -66,6 +65,3 @@ These graphs were generated using the values calculated by the Circadian Lightin
 
 ##### Color Temperature:
 ![cl_colortemp|690x129](https://community-home-assistant-assets.s3.dualstack.us-west-2.amazonaws.com/original/3X/5/9/59e84263cbecd8e428cb08777a0413672c48dfcd.PNG)
-
-##### Brightness:
-![cl_brightness|690x130](https://community-home-assistant-assets.s3.dualstack.us-west-2.amazonaws.com/original/3X/5/8/58ebd994b62a8b1abfb3497a5288d923ff4e2330.PNG)
